@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/map_layout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#DCDCDC"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:text="Map"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/brand_btnAdd"-->
+        <!--            android:layout_width="30dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_gravity="right|top"-->
+        <!--            app:srcCompat="@android:drawable/ic_menu_add" />-->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="200"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <Button
+        android:text="주변 쇼핑몰 검색"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/button"/>
+
+</LinearLayout>

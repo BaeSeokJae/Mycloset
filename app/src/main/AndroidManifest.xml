@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mycloset"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+
+    <application
+        android:allowBackup="false"
+        android:backupInForeground="false"
+        android:directBootAware="false"
+        android:icon="@drawable/closet"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBXp25CEDEFX-0aAKGC58dP7p0HvR16cuA" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BrandListActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+
+        <activity
+            android:name=".MapActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+
+        <activity
+            android:name=".MemoChangeActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+        <activity
+            android:name=".MemoListActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false"
+            android:taskAffinity="task.c">
+
+        </activity>
+        <activity
+            android:name=".ProductListActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+        <activity
+            android:name=".ProductSiteActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+        <activity
+            android:name=".ProductSiteActivity1"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+        <activity
+            android:name=".SelectListActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+        <activity
+            android:name=".LaunchActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+        <activity
+            android:name=".camera"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+        <activity
+            android:name=".camera1"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+
+        <activity
+            android:name=".MemoChangeActivity1"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+
+        <activity
+            android:name=".MemoChangeActivity2"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false"
+            android:theme="@android:style/Theme.Dialog">
+
+        </activity>
+
+        <activity
+            android:name=".EventListActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+
+        <activity
+            android:name=".EventBrandListActivity"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="false"
+            android:finishOnTaskLaunch="false">
+
+        </activity>
+
+        <activity
+            android:name=".swipe"
+            android:allowTaskReparenting="true"
+            android:alwaysRetainTaskState="false"
+            android:clearTaskOnLaunch="false"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="false"
+            android:theme="@style/Transparent">
+
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.mycloset"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+</manifest>
