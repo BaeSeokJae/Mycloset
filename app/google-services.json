@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "822137956345",
+    "firebase_url": "https://teamnova-hackathon.firebaseio.com",
+    "project_id": "teamnova-hackathon",
+    "storage_bucket": "teamnova-hackathon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822137956345:android:c5d5db4c684d6c92337f28",
+        "android_client_info": {
+          "package_name": "com.example.mycloset"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822137956345-bc9b91mntpsakmnfgmt6vdls4h48ug5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6L0IN3rNbaGeusb4pdtKrDqCBzCuFtRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822137956345-bc9b91mntpsakmnfgmt6vdls4h48ug5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

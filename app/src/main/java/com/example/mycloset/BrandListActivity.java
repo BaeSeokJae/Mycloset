@@ -3,6 +3,7 @@ package com.example.mycloset;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -32,6 +35,8 @@ public class BrandListActivity extends AppCompatActivity {
     private Button List, Memo, Map, Event;
     private ImageView imageView;
     private TextView textView;
+    String b = "https://youtu.be/8L3twAgNXuw";
+    String s = b.substring(17, 27);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,8 @@ public class BrandListActivity extends AppCompatActivity {
         t.start();
 
         textView = findViewById(R.id.Event_Thread);
+        imageView = findViewById(R.id.test);
+        Glide.with(this).load(" https://img.youtube.com/vi/" + s + "/" + "0.jpg").into(imageView);
 
         recyclerView = findViewById(R.id.brand_recyclerview);
         int numberOfColumns = 3; // 한줄에 5개의 컬럼을 추가합니다.
@@ -58,6 +65,10 @@ public class BrandListActivity extends AppCompatActivity {
 //        Memo = (Button) findViewById(R.id.Memo);
         Map = (Button) findViewById(R.id.Map);
         Event = findViewById(R.id.Event);
+
+
+//        Glide.with(this.getContext()).load(data.getEventBrandImage()).into(imageView);
+
 
         brandRecyclerAdapter.setOnItemClickListener(new BrandRecyclerAdapter.OnItemClickListener() {
             @Override
@@ -100,8 +111,11 @@ public class BrandListActivity extends AppCompatActivity {
         Event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BrandListActivity.this, EventBrandListActivity.class);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse( "https://youtu.be/8L3twAgNXuw" ));
+
                 startActivity(intent);
+//                Intent intent = new Intent(BrandListActivity.this, EventBrandListActivity.class);
+//                startActivity(intent);
             }
         });
 
@@ -117,7 +131,7 @@ public class BrandListActivity extends AppCompatActivity {
     public void BrandListData() {
         brandList = new ArrayList<>();
 
-        brandList.add(new Brand("Acne", "https://www.wizwid.com/CSW/handler/wizwid/kr/BrandCatalog-Start?BrandID=041191&RootCategoryID=&UpCategoryID=&ThirdCategoryID=&OrderType=&MaxRowNum=1506&PageNO=1&RPrice=&CouponYn=&SaleYn=&Delivery1=&Delivery2=#brand-category","https://www.acnestudios.com/kr/ko/home" ,R.drawable.acne));
+        brandList.add(new Brand("Acne", "https://www.youtube.com/channel/UCGX5sP4ehBkihHwt5bs5wvg","https://www.youtube.com/c/DogSwellfish/videos?view=0&sort=p&flow=grid" ,R.drawable.acne));
         brandList.add(new Brand("A.P.C", "https://www.wizwid.com/CSW/handler/wizwid/kr/BrandCatalog-Start?BrandID=039630&RootCategoryID=&UpCategoryID=&ThirdCategoryID=&OrderType=&MaxRowNum=1467&PageNO=1&RPrice=&CouponYn=&SaleYn=&Delivery1=&Delivery2=#brand-category", "http://www.apc-korea.com/main.do?referer=https://www.google.com/&null",R.drawable.apc));
         brandList.add(new Brand("adidas", "https://www.wizwid.com/CSW/handler/wizwid/kr/BrandCatalog-Start?BrandID=030088&RootCategoryID=&UpCategoryID=&ThirdCategoryID=&OrderType=&MaxRowNum=3340&PageNO=1&RPrice=&CouponYn=&SaleYn=&Delivery1=&Delivery2=#brand-category", "https://shop.adidas.co.kr/adiMain.action?gclid=CjwKCAjw5vz2BRAtEiwAbcVIL35z6v51Y65zNS-0pVsSrIYRe5aak4nReCAcrQQf4KMU04qdmS5xTRoCbHAQAvD_BwE&NFN_ST=Y",R.drawable.adidas));
         brandList.add(new Brand("Alexander\nMcQUEEN", "https://www.wizwid.com/CSW/handler/wizwid/kr/BrandCatalog-Start?BrandID=043872&RootCategoryID=&UpCategoryID=&ThirdCategoryID=&OrderType=&MaxRowNum=2905&PageNO=1&RPrice=&CouponYn=&SaleYn=&Delivery1=&Delivery2=#brand-category", "https://www.alexandermcqueen.com/kr",R.drawable.macqueen));

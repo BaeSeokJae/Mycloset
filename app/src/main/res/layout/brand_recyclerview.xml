@@ -85,6 +85,13 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="Map" />
+
+        <ImageView
+            android:id="@+id/test"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </LinearLayout>
